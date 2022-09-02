@@ -10,12 +10,13 @@ Kod JS napisz w tagu <script></script>
 6. Czy widzisz różnice w drukowaniu zmiennych x, oraz y?
 
 ## Zadanie 2
+Stwórz zmienne które przechowują poniższe typy danych:
 - Undefined
 - Null
-- String, Number
+- String
+- Number
 - Boolean
-- BigInt
-- Czym jest do cholery NaN?
+- NaN
 
 ## Zadanie 3a
 1. Utwórz tablicę imion
@@ -27,17 +28,66 @@ Kod JS napisz w tagu <script></script>
 
 
 ## Zadanie 3b
-Dodawanie i usuwanie elementów z tablicy
+1. Utwórz tablicę imion i nazwisk np. ["John Doe", "Kamil Ślimak", "Jan Kowalski", "Jan Abratek"]
+2. Posortuj tablicę
+3. *Dla każdego imienia wypisz inicjały
 
+Podpowiedź:
+```javascript
+name.split(' '); // Podzieli nam imię "John Doe" na tablicę ["John", "Doe"]
+console.log("John"[0]); // String też traktujemy jako tablicę znaków
+```
 
 ## Zadanie 4a
-Wprowadzenie do funkcji (return vs. console.log())
+1. Napisz funkcję, która drukuje informacje o użytkowniku z trzech zmiennych (firstName, lastName, age) w postaci "Jan Kowalski, lat: 30"
+2. Napisz funkcję, która (zamiast drukować) zwraca napis w postaci "Jan Kowalski, lat: 30"
+3. Dodaj trzech użytkowników zwróconych z drugiej funkcji do tablicy `users = []`
+4. Czy mógłbyś wykorzystać do tego funkcję z punktu pierwszego?
+
 
 ## Zadanie 4b
-Funkcje z plików zewnętrznych (importowanie plików js)
+1. Utwórz plik `funkcje.js` i zaimportuj go do htmla.
+2. W tym pliku napisz funkcję `function jobPost()` wypisującą (nie zwracającą) przynajmniej jednolinijkową reklamę pracy w x-kom.
+3. Uruchom html w przeglądarce i zobacz czy funkcja się wypisała.
+4. Co trzeba zrobić żeby reklama się pojawiła w konsoli?
 
 ## Zadanie 5
-Anonymous function into arrow function
+1. Stwórz tablicę produktów (stringów)
+2. Napisz funkcję która wypisze ilość znaków każdego produktu w postaci "Nazwa produktu: x znaków"
+3. Postaraj użyć się funkcji .map() oraz arrow function.
 
 
-## Zadanie 6
+## Zadanie 6a
+1. Utwórz obiekt user z parametrami:
+- login (string)
+- password (string)
+- is_active (true/false)
+- email (string)
+2. Stwórz funkcję, która jako parametr przyjmuje obiekt User, a następnie wypisuje w konsoli:
+- "Logowanie użytkownika: login"
+- "Hasłem: password"
+- "Status użytkownika: aktywny/nieaktywy, email użytkownika: email"
+
+## Zadanie 7
+1. Napisz klasę Car (używając składni ES6)
+2. Zdefiniuj w niej producenta, markę i przebieg w konstruktorze.
+3. Napisz funkcję która zwraca cenę dziennego wynajmu (`getPrice()`). Domyślnie koszt każego samochodu to 200 zł / dzień.
+4. Utwórz trzy różne samochody i wywołaj na nich metodę zwracającą cenę.
+
+
+## Zadanie 8
+Użyj kodu z zadania 7. Wprowadź następujące ulepszenia metody `getPrice()`
+1. Jeżeli przebieg samochodu jest mniejszy niż 10 000 km to cena wynajmu dziennego wzrasta o 20%.
+2. Jeżeli przebieg samochodu jest większy niż 100 000 km to cena wynajmu dziennego spada o 15%.
+3. Jeżeli producent samochodu to "Honda", to cena wynajmu rośnie o 10%.
+4. Jeżeli marka samochodu to "Multipla", to wynajem auta nie kosztuje nic.
+
+
+## Zadanie 9a
+Napisz funkcję sumNumbers(x,y), która policzy sumę wszystkich liczb w przedziale od x do y.
+Przykład: dla `x=3`, `y=11` suma to `3+4+5+6+7+8+9+10+11=63`
+
+
+## Zadanie 9b
+Napisz funkcję getAvgFromEven(arr), która jako parametr przyjmuje tablicę a następnie liczy średnią z liczb parzystych.
+Przykład: dla `[1, 2, 3, 4, 5, 6]` średnia to `(2 + 4 + 6)/3 = 4`
