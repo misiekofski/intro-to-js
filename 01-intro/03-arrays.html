@@ -10,6 +10,39 @@
     <h1>03 - tablice</h1>
     <script>
         // tu wpisz kod według wytycznych ćwiczenia
+        let nameArr = ["Michał", "Martyna", "Ela", "Maciej", "Mariusz"];
+        let numArr = [1,2,3,4,5,6,7];
+        let mixedArr = [true, NaN, "Napis", false, 4.24];
+
+        // pierwszy element tablicy imion
+        console.log(nameArr[0]);
+        // ostatni element tablicy liczb
+        console.log(numArr[numArr.length-1]);
+        // przedostatni element mixedArr
+        console.log(mixedArr[mixedArr.length-2]);
+
+        // 3b
+        let names = ["John Doe", "Kamil Ślimak", "Jan Kowalski", "Jan Abratek"];
+        names.sort()
+
+        // wypisz inicjały
+        names.forEach((element) => {
+            let tempArr = element.split(" "); // ["John", "Doe"]
+            let pierwszaLiteraImienia = tempArr[0][0];
+            let pierwszaLiteraNazwiska = tempArr[1][0];
+            console.log(pierwszaLiteraImienia + pierwszaLiteraNazwiska);
+
+        });
+
+        let inicjaly = names.map((element) => {
+            let tempArr = element.split(" ");
+            let pierwszaLiteraImienia = tempArr[0][0];
+            let pierwszaLiteraNazwiska = tempArr[1][0];
+            return pierwszaLiteraImienia + pierwszaLiteraNazwiska;
+        });
+
+        console.log(inicjaly);
+
     </script>
 </body>
 </html>

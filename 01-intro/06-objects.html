@@ -9,7 +9,20 @@
 <body>
     <h1>06 - obiekty</h1>
     <script>
-        // tu wpisz kod według wytycznych ćwiczenia
+        const myUser = {
+            loginName: "dobrzycki",
+            password: "P@ssword1",
+            isActive: true,
+            email: "dobrzycki@gmail.com",
+            login: function() {
+                console.log("Logowanie użytkownika: " + this.loginName);
+                console.log("Hasłem: " + this.password);
+                console.log("Status użytkownika: " + this.isActive + ", email: " + this.email);
+            }
+        }
+
+        myUser.login();
+        
     </script>
 </body>
 </html>

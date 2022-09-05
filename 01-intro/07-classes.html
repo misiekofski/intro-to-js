@@ -9,7 +9,48 @@
 <body>
     <h1>07 - klasy</h1>
     <script>
-        // tu wpisz kod według wytycznych ćwiczenia
+        class Car {
+        constructor(name, producer, brand, mileage) {
+          this.name = name;
+          this.producer = producer;
+          this.brand = brand;
+          this.mileage = mileage;
+        }
+        
+        getPrice(numOfDays) {
+            let price = 200;
+
+            if (this.mileage<10000) {
+                price = price * 1.2;
+            } else if (this.mileage>100000) {
+                price = price / 1.15;
+            }
+
+            if (this.producer==="Honda") {
+                price = price * 1.1;
+            }
+
+            if (this.brand==="Multipla") {
+                price = 0;
+            }
+
+            return price * numOfDays;
+        }
+      }
+
+        const polonez = new Car("Polonez", "FSO", "Caro", 150000);
+        const honda = new Car("Honda", "Honda", "Civic", 9999);
+        const multipla = new Car("Multipla", "Fiat", "Multipla", 50000);
+
+        let cenaPoloneza = polonez.getPrice(5);
+        console.log("Cena Poloneza to: " + cenaPoloneza);
+
+        let cenaMazdy = honda.getPrice(3);
+        console.log("Cena Hondy to: " + cenaMazdy);
+
+        let cenaMultipli = multipla.getPrice(3);
+        console.log("Cena Multipli to: " + cenaMultipli);
+
     </script>
 </body>
 </html>
